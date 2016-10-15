@@ -32,6 +32,8 @@ class Controller:
             tcp_header = packet[iph_length:iph_length+20]
             #instance the object for tcp header
             tcph = TCP_header(tcp_header)
+            tcph.show()
+            print ""
 
             
 

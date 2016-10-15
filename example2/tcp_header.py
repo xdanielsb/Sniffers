@@ -11,6 +11,15 @@ class TCP_header():
         self.data_offset = tcph[4]
         self.length = self.data_offset >> 4
 
+    def show(self):
+        print "TCP Header: "
+        print "source port: " + str(self.source_port) + \
+                ", dest port: " + str(self.dest_port) + \
+                ", sequence number: " +  str(self.sequence_number) + \
+                ", acknowledgement: " + str(self.acknowledgement) + \
+                ", data_offset: " + str(self.data_offset) + \
+                ", length" + str(self.length)
+
     def get_source_port(self):
         return self.source_port
 

@@ -18,6 +18,7 @@ class IPv4_header:
         self.dest_address = socket.inet_ntoa(iph[9]);
 
     def show(self):
+        print "IPv4 Header"
         print   " Version: " + str(self.version) + \
                 ", ihl: " + str(self.ihl) +  \
                 ", ttl: " + str(self.ttl) + \
@@ -50,6 +51,3 @@ class IPv4_header:
     
     
 
-
-
-    
