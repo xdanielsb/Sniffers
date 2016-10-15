@@ -17,8 +17,9 @@ while True:
     packet = s.recvfrom(65565)
      
     #packet string from tuple
+    print packet
     packet = packet[0]
-    
+    print packet    
     #The first 20 characters going to represent the ip header 
     ip_header = packet[0:20]
     

@@ -8,4 +8,23 @@ class TCP_header():
         self.acknowledgement = tcph[3]
         self.data_offset = tcph[4]
         self.length = data_offset >> 4
+
+    def get_source_port(self):
+        return self.source_port
+
+    def get_dest_port(self):
+        return self.dest_port
+
+    def get_sequence_number(self):
+        return self.sequence_number
+
+    def get_acknowledgement(self):
+        return self.acknowledgement
+
+    def get_data_offset(self):
+        return self.get_data_offset
+
+    def get_length(self):
+        return self.length
+
         
