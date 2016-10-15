@@ -1,13 +1,15 @@
+from struct import *
+
 class TCP_header():
-    def __init__(header):
-        tcph = unpack('!HHLLBBHHH' , tcp_header)
+    def __init__(self, header):
+        tcph = unpack('!HHLLBBHHH' , header)
         
         self.source_port = tcph[0]
         self.dest_port = tcph[1]
         self.sequence_number = tcph[2]
         self.acknowledgement = tcph[3]
         self.data_offset = tcph[4]
-        self.length = data_offset >> 4
+        self.length = self.data_offset >> 4
 
     def get_source_port(self):
         return self.source_port

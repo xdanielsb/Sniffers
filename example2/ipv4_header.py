@@ -17,6 +17,16 @@ class IPv4_header:
         self.source_address = socket.inet_ntoa(iph[8]);
         self.dest_address = socket.inet_ntoa(iph[9]);
 
+    def show(self):
+        print   " Version: " + str(self.version) + \
+                ", ihl: " + str(self.ihl) +  \
+                ", ttl: " + str(self.ttl) + \
+                ", protocol: " + str(self.protocol) + \
+                ", length: " + str(self.iph_length) +  \
+                ", source_address: " + str(self.source_address) + \
+                ", dest address: " + str(self.source_address) 
+
+
     def get_version(self):
         return self.version
 
