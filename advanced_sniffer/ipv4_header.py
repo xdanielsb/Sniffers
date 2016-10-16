@@ -1,6 +1,10 @@
 import socket
 from struct import *
-
+"""
+    Daniel Santos
+    2016
+    This class represents a IPv4 header
+"""
 
 class IPv4_header:
 
